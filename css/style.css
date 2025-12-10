@@ -5,25 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-}
-
-.home-page {
-    background-color: #222;
-    background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 
 
@@ -52,10 +33,6 @@ body {
     z-index: 20;
     filter: brightness(1.1);
     transform: scale(1.02);
-}
-
-.content {
-    z-index: 2;
 }
 
 .content h1 {
@@ -94,7 +71,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
-    background: linear-gradient(135deg, #FF3D00 0%, #FF6E40 100%); /* Red */
+    background: url('../images/index/1.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 2. 大三角形2 (橙色) - HISTORY
@@ -106,7 +84,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(0% 0%, 0% 100%, 50% 50%);
-    background: linear-gradient(135deg, #FF9100 0%, #FFB74D 100%); /* Orange */
+    background: url('../images/index/2.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 3. 小三角形1 (黄色) - COMMUNITY SPACES
@@ -118,7 +97,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(100% 0%, 100% 50%, 75% 25%);
-    background: linear-gradient(135deg, #FFEA00 0%, #FFF176 100%); /* Yellow */
+    background: url('../images/index/3.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 4. 正方形 (绿色) - ART NEWS
@@ -130,7 +110,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(50% 50%, 75% 25%, 100% 50%, 75% 75%);
-    background: linear-gradient(135deg, #00E676 0%, #69F0AE 100%); /* Green */
+    background: url('../images/index/4.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 5. 小三角形2 (青色) - MOMENT CAPTURE
@@ -142,7 +123,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(50% 50%, 75% 75%, 25% 75%);
-    background: linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%); /* Cyan */
+    background: url('../images/index/5.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 6. 平行四边形 (蓝色) - CARE WALL
@@ -154,7 +136,8 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(0% 100%, 25% 75%, 75% 75%, 50% 100%);
-    background: linear-gradient(135deg, #2962FF 0%, #448AFF 100%); /* Blue */
+    background: url('../images/index/6.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* 7. 中三角形 (紫色) - MoSAIC HEADER
@@ -166,15 +149,21 @@ body {
     width: 100%;
     height: 100%;
     clip-path: polygon(50% 100%, 100% 100%, 100% 50%);
-    background: linear-gradient(135deg, #AA00FF 0%, #E040FB 100%); /* Purple */
+    background: url('../images/index/7.jpg') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 /* Text positioning adjustments for standard tangram square */
 /* Reset default centering for specific manual positioning */
 .grid-item .content {
     position: absolute;
-    width: 100%;
-    pointer-events: none; /* Let clicks pass through text to the shape */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    pointer-events: none;
+    z-index: 2;
 }
 
 /* 1. Red Large Triangle (Top) - Center at (50%, 25%) */
@@ -262,14 +251,7 @@ body {
     }
 }
 
-/* Subpage Styles */
-.subpage-body {
-    display: block;
-    height: auto;
-    background-color: #f9f9f9;
-    color: #333;
-    overflow-x: hidden;
-}
+
 
 .subpage-nav {
     background-color: #333;
@@ -366,7 +348,6 @@ body {
 .back-home {
     text-align: center;
     padding: 2rem;
-    background-color: #333;
 }
 
 .back-home a {

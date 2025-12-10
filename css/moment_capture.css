@@ -1,9 +1,13 @@
 /* Moment Capture Page Styles */
+:root {
+    --main-color: #c4704f;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: var(--main-color);
     color: #333;
 }
 
@@ -46,7 +50,7 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     padding: 4rem 2rem;
     text-align: center;
     color: white;
@@ -76,7 +80,7 @@ body {
 }
 
 .upload-box {
-    border: 3px dashed #2193b0;
+    border: 3px dashed var(--main-color);
     border-radius: 12px;
     padding: 3rem;
     text-align: center;
@@ -87,7 +91,7 @@ body {
 
 .upload-box:hover, .upload-box.drag-over {
     background: #f0faff;
-    border-color: #6dd5ed;
+    border-color: var(--main-color);
 }
 
 .upload-content h3 {
@@ -105,7 +109,7 @@ body {
 }
 
 .upload-btn {
-    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     color: white;
     border: none;
     padding: 0.8rem 2rem;
@@ -123,9 +127,9 @@ body {
 /* Gallery Container */
 .gallery-container h2 {
     text-align: center;
-    color: #333;
+    color: var(--main-color);
     margin-bottom: 2rem;
-    border-bottom: 2px solid #2193b0;
+    border-bottom: 2px solid var(--main-color);
     display: inline-block;
     padding-bottom: 0.5rem;
 }

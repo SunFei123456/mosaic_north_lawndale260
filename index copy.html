@@ -18,7 +18,7 @@
             align-items: center;
             min-height: 100vh;
             background-color: #f0f0f0;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1920&auto=format&fit=crop');
+            background-image: url('./images/index/background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -50,6 +50,9 @@
 
         .hotspot {
             fill: transparent;
+            /* 默认显示微弱的边框，方便您检查形状是否正确 */
+            stroke: rgba(255, 255, 255, 0.3);
+            stroke-width: 0.5px;
             cursor: pointer;
             transition: all 0.2s ease;
         }
@@ -61,45 +64,33 @@
             stroke-width: 2px;
         }
 
-        /* 各区域悬停颜色 - 使用对应页面的主题色调 */
+        /* 各区域悬停颜色 */
         .hotspot.red:hover {
-            fill: rgba(255, 183, 0, var(--hover-opacity)); /* #ffb700 - North Lawndale */
+            fill: rgba(255, 0, 0, var(--hover-opacity));
         }
 
         .hotspot.yellow:hover {
-            fill: rgba(110, 221, 255, var(--hover-opacity)); /* #6eddff - History */
+            fill: rgba(255, 165, 0, var(--hover-opacity));
         }
 
         .hotspot.orange:hover {
-            fill: rgba(191, 52, 59, var(--hover-opacity)); /* #bf343b - Community Spaces */
+            fill: rgba(255, 140, 0, var(--hover-opacity));
         }
 
         .hotspot.beige:hover {
-            fill: rgba(42, 150, 94, var(--hover-opacity)); /* #2a965e - Art News */
+            fill: rgba(245, 245, 220, var(--hover-opacity));
         }
 
         .hotspot.green:hover {
-            fill: rgba(196, 112, 79, var(--hover-opacity)); /* #c4704f - Moment Capture */
+            fill: rgba(0, 255, 0, var(--hover-opacity));
         }
 
         .hotspot.blue:hover {
-            fill: rgba(255, 118, 69, var(--hover-opacity)); /* #ff7645 - Care Wall */
+            fill: rgba(0, 191, 255, var(--hover-opacity));
         }
 
         .hotspot.purple:hover {
-            fill: rgba(178, 77, 255, var(--hover-opacity)); /* #b24dff - About Us */
-        }
-        
-        .main-title {
-            position: absolute;
-            bottom: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            z-index: 10;
+            fill: rgba(128, 0, 128, var(--hover-opacity));
         }
     </style>
 </head>
@@ -110,33 +101,32 @@
         <svg class="click-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
             <!-- 1. Top Triangle (Red) - NORTH LAWNDALE -->
             <polygon class="hotspot red" points="0,0 100,0 50,50" onclick="handleClick('north_lawndale.html')" />
-            <text x="50" y="20" text-anchor="middle" fill="white" font-size="2" font-weight="bold">1. NORTH LAWNDALE</text>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="8" font-weight="bold">1. NORTH LAWNDALE</text>
 
             <!-- 2. Right Triangle (Yellow/Orange) - HISTORY -->
             <polygon class="hotspot yellow" points="100,0 100,45 75,25" onclick="handleClick('history.html')" />
-            <text x="90" y="25" text-anchor="middle" fill="white" font-size="2" font-weight="bold">2. HISTORY</text>
+            <text x="92" y="20" text-anchor="middle" fill="white" font-size="6" font-weight="bold">2. HISTORY</text>
 
             <!-- 3. Top-Left Triangle (Orange) - COMMUNITY SPACES -->
             <polygon class="hotspot orange" points="0,0 50,50 0,100" onclick="handleClick('community_spaces.html')" />
-            <text x="15" y="50" text-anchor="middle" fill="white" font-size="2" font-weight="bold">3. COMMUNITY</text>
+            <text x="15" y="50" text-anchor="middle" fill="white" font-size="6" font-weight="bold">3. COMMUNITY</text>
 
             <!-- 4. Small Center-Left Triangle (Beige/Light) - ART NEWS -->
             <polygon class="hotspot beige" points="75,27 100,52 75,77 50,52" onclick="handleClick('art_news.html')" />
-            <text x="75" y="54" text-anchor="middle" fill="white" font-size="2" font-weight="bold">4. ART NEWS</text>
+            <text x="75" y="54" text-anchor="middle" fill="white" font-size="6" font-weight="bold">4. ART NEWS</text>
 
             <!-- 5. Center Diamond (Green) - MOMENT CAPTURE -->
             <polygon class="hotspot green" points="50,50 75,75 25,75" onclick="handleClick('moment_capture.html')" />
-            <text x="50" y="68" text-anchor="middle" fill="white" font-size="2" font-weight="bold">5. MOMENT</text>
+            <text x="50" y="70" text-anchor="middle" fill="white" font-size="6" font-weight="bold">5. MOMENT</text>
 
             <!-- 6. Bottom-Right Triangle (Blue) - CARE WALL -->
             <polygon class="hotspot blue" points="75,75 25,75 0,100 50,100" onclick="handleClick('care_wall.html')" />
-            <text x="36" y="89" text-anchor="middle" fill="white" font-size="2" font-weight="bold">6. CARE WALL</text>
+            <text x="35" y="90" text-anchor="middle" fill="white" font-size="6" font-weight="bold">6. CARE WALL</text>
           
             <!-- 7. Bottom-Left Polygon (Purple) - ABOUT US -->
             <polygon class="hotspot purple" points="50,100 100,100 100,50" onclick="handleClick('about_us.html')" />
-            <text x="83" y="83" text-anchor="middle" fill="white" font-size="2" font-weight="bold">7. ABOUT US</text>
+            <text x="83" y="83" text-anchor="middle" fill="white" font-size="6" font-weight="bold">7. ABOUT US</text>
         </svg>
-        <div class="main-title">MoSAIC NORTH LAWNDALE</div>
     </div>
 
     <script>

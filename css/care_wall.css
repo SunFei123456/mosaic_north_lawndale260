@@ -1,9 +1,13 @@
 /* Care Wall Page Styles */
+:root {
+    --main-color: #ff7645;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: var(--main-color);
     color: #333;
 }
 
@@ -46,7 +50,7 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #cc2b5e 0%, #753a88 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     padding: 4rem 2rem;
     text-align: center;
     color: white;
@@ -101,7 +105,7 @@ body {
 
 .care-text h3 {
     font-size: 2rem;
-    color: #cc2b5e;
+    color: var(--main-color);
     margin: 0 0 1rem 0;
     font-family: 'Playfair Display', serif; /* Assuming available or fallback to serif */
     font-style: italic;
@@ -109,10 +113,26 @@ body {
 
 .care-text p {
     font-size: 1.2rem;
-    color: #555;
+    color: #444;
     line-height: 1.8;
     margin: 0;
     max-width: 600px;
+}
+
+.care-text strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.care-text a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.care-text a:hover {
+    color: #333;
+    text-decoration: underline;
 }
 
 .care-image {

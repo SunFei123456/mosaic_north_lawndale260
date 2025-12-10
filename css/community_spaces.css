@@ -1,9 +1,13 @@
 /* Community Spaces Page Styles */
+:root {
+    --main-color: #bf343b;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: var(--main-color);
     color: #333;
 }
 
@@ -46,7 +50,7 @@ body {
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, #56ab2f 0%, #a8e063 100%);
+    background: linear-gradient(135deg, var(--main-color) 0%, var(--main-color) 100%);
     padding: 4rem 2rem;
     text-align: center;
     color: white;
@@ -84,6 +88,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid var(--main-color);
 }
 
 .card:hover {
@@ -115,16 +120,32 @@ body {
 .card-content h2 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: #333;
+    color: var(--main-color);
     font-size: 1.8rem;
-    border-bottom: 2px solid #56ab2f;
+    border-bottom: 2px solid var(--main-color);
     display: inline-block;
     padding-bottom: 0.5rem;
 }
 
 .card-content p {
-    color: #555;
+    color: #444;
     line-height: 1.6;
     font-size: 1.1rem;
     margin: 0;
+}
+
+.card-content strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.card-content a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-content a:hover {
+    color: #333;
+    text-decoration: underline;
 }
