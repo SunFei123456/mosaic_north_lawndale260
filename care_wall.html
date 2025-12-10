@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Care Wall - MoSAIC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/care_wall.css">
+  
+</head>
+<body class="subpage-body">
+    <header class="page-header header-care">
+        <h1>THE CARE WALL</h1>
+        <p>Support, Love, and Resources</p>
+    </header>
+
+    <div class="container care-container">
+        <!-- Card 1 -->
+        <div class="care-card">
+            <div class="care-text">
+                <h3>"Healing is not linear."</h3>
+                <p>Allow yourself the grace to grow at your own pace. Every small step forward is a victory worth celebrating.</p>
+            </div>
+            <div class="care-image">
+                <img src="./images/h-1.avif" alt="Peaceful moment">
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="care-card">
+            <div class="care-text">
+                <h3>"Community is strength."</h3>
+                <p>When we lift each other up, we rise together. Lean on your neighbors, and let them lean on you.</p>
+            </div>
+            <div class="care-image">
+                <img src="./images/h-2.avif" alt="Community support">
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="care-card">
+            <div class="care-text">
+                <h3>"Your story matters."</h3>
+                <p>Every voice in North Lawndale adds a unique thread to our shared tapestry. Speak your truth with courage.</p>
+            </div>
+            <div class="care-image">
+                <img src="./images/h-3.avif" alt="Individual strength">
+            </div>
+        </div>
+    </div>
+
+    <footer class="back-home">
+        <a href="index.html">← Back to Home</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

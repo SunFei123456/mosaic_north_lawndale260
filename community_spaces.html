@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Spaces - MoSAIC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/community_spaces.css">
+  
+</head>
+<body class="subpage-body">
+    <header class="page-header header-community">
+        <h1>COMMUNITY SPACES</h1>
+        <p>Gathering, Growing, and Thriving</p>
+    </header>
+
+    <div class="container cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/3-1.avif" alt="Douglass Park Landscape">
+            </div>
+            <div class="card-content">
+                <h2>Douglass Park & Recreation</h2>
+                <p>Spanning over 173 acres, Douglass Park is the green heart of the West Side. It features lagoons, gymnasiums, and sports fields that host summer festivals and daily community life.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/3-2.avif" alt="Community Garden">
+            </div>
+            <div class="card-content">
+                <h2>Urban Gardens & Greening</h2>
+                <p>Local residents have transformed vacant lots into vibrant community gardens. These spaces not only provide fresh produce but also serve as peaceful sanctuaries and outdoor classrooms for youth.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="./images/3-2.avif" alt="Community Center Event">
+            </div>
+            <div class="card-content">
+                <h2>The Firehouse Community Arts Center</h2>
+                <p>A historic firehouse turned into a safe haven for young people. Through arts, mentorship, and culinary training, this center empowers the next generation of North Lawndale leaders.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="back-home">
+        <a href="index.html">← Back to Home</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

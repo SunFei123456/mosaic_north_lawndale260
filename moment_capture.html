@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment Capture - MoSAIC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/moment_capture.css">
+  
+</head>
+<body class="subpage-body">
+    <header class="page-header header-moment">
+        <h1>MOMENT CAPTURE</h1>
+        <p>Snapshots of Life</p>
+    </header>
+
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-box" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <span class="upload-icon">📷</span>
+                    <h3>Share Your Moment</h3>
+                    <p>Click or drag photos here to upload</p>
+                    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Select Photo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-container">
+            <h2>Community Gallery</h2>
+            <div class="photo-grid" id="photoGrid">
+                <!-- Sample Items -->
+                <div class="photo-card">
+                    <img src="./images/h-1.avif" alt="Community Moment">
+                    <div class="photo-info">
+                        <span class="photo-date">Oct 12, 2023 • 2:30 PM</span>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="./images/h-2.avif" alt="Community Moment">
+                    <div class="photo-info">
+                        <span class="photo-date">Nov 05, 2023 • 4:15 PM</span>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="./images/h-3.avif" alt="Community Moment">
+                    <div class="photo-info">
+                        <span class="photo-date">Dec 01, 2023 • 10:00 AM</span>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="./images/3-1.avif" alt="Community Moment">
+                    <div class="photo-info">
+                        <span class="photo-date">Dec 15, 2023 • 1:45 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="back-home">
+        <a href="index.html">← Back to Home</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Photo Upload Logic
+        const fileInput = document.getElementById('fileInput');
+        const photoGrid = document.getElementById('photoGrid');
+        const dropZone = document.getElementById('dropZone');
+
+        // Handle File Select
+        fileInput.addEventListener('change', function(e) {
+            handleFiles(e.target.files);
+        });
+
+        // Drag and Drop Events
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        function handleFiles(files) {
+            Array.from(files).forEach(file => {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        createPhotoCard(e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        function createPhotoCard(imageSrc) {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+            
+            const card = document.createElement('div');
+            card.className = 'photo-card fade-in';
+            card.innerHTML = `
+                <img src="${imageSrc}" alt="Uploaded Moment">
+                <div class="photo-info">
+                    <span class="photo-date">${dateStr} • ${timeStr}</span>
+                </div>
+            `;
+            
+            // Insert new photo at the beginning of the grid
+            photoGrid.insertBefore(card, photoGrid.firstChild);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* Moment Capture Page Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigation */
+.subpage-nav {
+    background-color: #333;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 4rem;
+}
+
+.upload-box {
+    border: 3px dashed #2193b0;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    background: #fdfdfd;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.upload-box:hover, .upload-box.drag-over {
+    background: #f0faff;
+    border-color: #6dd5ed;
+}
+
+.upload-content h3 {
+    margin: 1rem 0 0.5rem;
+    color: #333;
+}
+
+.upload-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.upload-icon {
+    font-size: 3rem;
+}
+
+.upload-btn {
+    background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.upload-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery Container */
+.gallery-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #2193b0;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.gallery-container {
+    text-align: center;
+}
+
+/* Photo Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1;
+    position: relative;
+    group: 'card';
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 0.8rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.photo-card:hover .photo-info {
+    transform: translateY(0);
+}
+
+.photo-date {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}

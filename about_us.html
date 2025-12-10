@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MoSAIC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about_us.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="subpage-body">
+    <header class="page-header header-about">
+        <h1>ABOUT US</h1>
+        <p>Meet the Team Behind MoSAIC</p>
+    </header>
+
+    <div class="container">
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="./images/a.avif" alt="Team Member">
+                </div>
+                <div class="team-info">
+                    <h3>Sarah Johnson</h3>
+                    <span class="team-role">Project Lead</span>
+                    <p>Dedicated to preserving North Lawndale's rich history and fostering community growth through digital storytelling.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="./images/a1.avif" alt="Team Member">
+                </div>
+                <div class="team-info">
+                    <h3>David Chen</h3>
+                    <span class="team-role">Community Outreach</span>
+                    <p>Passionate about connecting residents with resources and organizing local events that celebrate our neighborhood's culture.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="./images/a2.avif" alt="Team Member">
+                </div>
+                <div class="team-info">
+                    <h3>Maria Rodriguez</h3>
+                    <span class="team-role">Lead Historian</span>
+                    <p>An archivist with a deep love for uncovering hidden stories and ensuring our past inspires our future generations.</p>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <img src="./images/a3.avif" alt="Team Member">
+                </div>
+                <div class="team-info">
+                    <h3>Marcus Williams</h3>
+                    <span class="team-role">Creative Director</span>
+                    <p>Bringing the vibrant colors and energy of North Lawndale to life through visual arts and multimedia installations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="back-home">
+        <a href="index.html">← Back to Home</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

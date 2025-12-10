@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of North Lawndale - MoSAIC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/history.css">
+  
+</head>
+<body class="subpage-body">
+    <header class="page-header header-history">
+        <h1>HISTORY OF NORTH LAWNDALE</h1>
+        <p>Stone Temple and Beyond</p>
+    </header>
+
+    <div class="container history-container">
+        <div class="section intro">
+            <p>North Lawndale’s story is rooted in faith, resilience, and community care. Explore the milestones through archival photography paired with the voices of residents who shaped each era.</p>
+        </div>
+
+        <section class="history-stack">
+            <article class="history-block">
+                <img src="./images/h-1.avif" alt="Historic Stone Temple exterior">
+                <div class="history-text">
+                    <h2>Stone Temple Origins</h2>
+                    <p>The Stone Temple Baptist Church became an anchor for the neighborhood shortly after its construction in 1926. Its sanctuary welcomed new migrants from the South and offered mutual aid programs that eased their transition into Chicago life.</p>
+                    <p>Congregants remember the early years as a blend of spirited worship, mutual support, and organizing meetings that laid the groundwork for future civil rights actions.</p>
+                </div>
+            </article>
+
+            <article class="history-block">
+                <img src="./images/h-2.avif" alt="Community gathering in North Lawndale">
+                <div class="history-text">
+                    <h2>Movement &amp; Momentum</h2>
+                    <p>In the 1960s, Dr. Martin Luther King Jr. and local leaders used the temple as a base to push for fair housing. Sit-ins, food programs, and legal clinics radiated from this address, transforming the block into a hub of grassroots power.</p>
+                    <p>Today’s revitalization projects still follow that example—pairing cultural memory with action to ensure new investments benefit long-time residents.</p>
+                </div>
+            </article>
+
+            <article class="history-block">
+                <img src="./images/h-3.avif" alt="Modern mural celebrating community">
+                <div class="history-text">
+                    <h2>Looking Forward</h2>
+                    <p>Fresh murals, pocket gardens, and youth storytelling projects keep the legacy alive. Each new chapter begins with reflection—honoring the images and testimonies that came before.</p>
+                    <p>Scroll through, share memories, and help document the next century of North Lawndale’s history.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <footer class="back-home">
+        <a href="index.html">← Back to Home</a>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Back to Top Button Logic
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        };
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
