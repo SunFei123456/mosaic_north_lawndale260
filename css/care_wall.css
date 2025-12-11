@@ -87,6 +87,7 @@ body {
     background: white;
     width: 100%;
     max-width: 800px;
+    height: 500px;
     border-radius: 20px;
     padding: 3rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -136,8 +137,7 @@ body {
 }
 
 .care-image {
-    width: 200px;
-    height: 150px;
+    width: 80%;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
